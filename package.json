@@ -22,7 +22,6 @@
     "eject": "react-scripts eject",
     "sass": "sass --watch src/styles/scss:src/styles/css"
   },
-  "proxy": "https://softwrap-test.herokuapp.com",
   "eslintConfig": {
     "extends": "react-app"
   },
