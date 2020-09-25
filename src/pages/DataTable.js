@@ -29,7 +29,7 @@ export class DataTable extends Component {
 
     getDatas () {
         const p = this.state.page
-        fetch(`https://softwrap-test.herokuapp.com/api/table?page=${p}&limit=5`, {
+        fetch(`https://softwrap-test-frontend.herokuapp.com/api/table?page=${p}&limit=5`, {
             method: 'GET'
         })
         .then(res => {
@@ -42,7 +42,7 @@ export class DataTable extends Component {
                         (result.amount % NUMBER_OF_LINES_PER_PAGES === 0 ? result.amount / NUMBER_OF_LINES_PER_PAGES : (result.amount / NUMBER_OF_LINES_PER_PAGES) + 1)
                 this.setState({ amountPages: amountPages })
                 if (result.user.length) {
-                    this.setState({ personalData: result.user })
+                    this.setState({ personalData: result.user })//, () => { this.getDatas() })
                 } else {
                     this.setState({ isLoaded: true })
                 }
@@ -94,7 +94,7 @@ export class DataTable extends Component {
     }
 
     updateData () {
-        fetch('https://softwrap-test.herokuapp.com/api/table', {
+        fetch('https://softwrap-test-frontend.herokuapp.com/api/table', {
             method: 'PUT',
             body: JSON.stringify(this.state.people),
             headers: { 'Content-Type': 'application/json' }
@@ -158,7 +158,7 @@ export class DataTable extends Component {
     }
 
     deleteData () {
-        fetch('https://softwrap-test.herokuapp.com/api/table', {
+        fetch('https://softwrap-test-frontend.herokuapp.com/api/table', {
             method: 'DELETE',
             body: JSON.stringify(this.state.people),
             headers: { 'Content-Type': 'application/json' }
@@ -175,7 +175,7 @@ export class DataTable extends Component {
     }
 
     saveData () {
-        fetch('https://softwrap-test.herokuapp.com/api/table', {
+        fetch('https://softwrap-test-frontend.herokuapp.com/api/table', {
             method: 'POST',
             body: JSON.stringify(this.state.people),
             headers: { 'Content-Type': 'application/json' }
