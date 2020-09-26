@@ -6,7 +6,7 @@ O QUE É
 
 CONVENÇÕES UTILIZADAS
 
-Foi utilizado eslint para a garantia de padronização e boas praticas
+Foi utilizado eslint para a garantia de padronização e boas práticas.
 
 Todas as classes e variáveis nomeadas em inglês
 
@@ -20,11 +20,11 @@ O motivo das tecnologias de desenvolvimento escolhidas, foram por eu já ter um 
 
 DESCRIÇÃO DAS FUNCIONALIDADES
 
-Para as requisições foram ultilizado o método fecth()
+Para as requisições foi ultilizado o método fecth()
 
 Todos os endpoints da Api retornam mensagem de sucesso ou erro, que são mostradas pelo frontend através de um toast
 
-Salvar (POST): O programa permite salvar um número ilimitado de registro, porém o mesmo não permite salvar dois registros com o mesmo cpf e nem enviar dados em branco, passando por um tratamento pelo frontend antes de fazer a requisição. O programa também realiza a validação do cpf, mas para fins de testes, é permitido salvar um documento o mesmo não impedi salvar um cpf inválido.
+Salvar (POST): O programa permite salvar um número ilimitado de registro, porém o mesmo não permite salvar dois registros com o mesmo cpf e nem enviar dados em branco, passando por um tratamento pelo frontend antes de fazer a requisição. O programa também realiza a validação do cpf, mas para fins de testes, é permitido salvar um documento o mesmo não impede salvar um cpf inválido.
 
 Mostrar (GET): O programa possui uma paginação que permite mostrar até 5 registros por vez, a paginação é feita pelo backend por uma função do banco de dados (mongo), onde o frontend manda no HEADER da request o número da pagina e a quantidade máxima de registros, o backend retorna os registros requisitados e o número total de registro no schema, para que o frontend possa mostrar o número de páginas dinamicamente.
 
